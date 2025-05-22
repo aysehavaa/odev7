@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.example.todoapp.ui.home.HomeFragment"
+        android:label="Yapılacaklar">
+        <action
+            android:id="@+id/action_homeFragment_to_addTodoFragment"
+            app:destination="@id/addTodoFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_detailFragment"
+            app:destination="@id/detailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/addTodoFragment"
+        android:name="com.example.todoapp.ui.add.AddTodoFragment"
+        android:label="Yeni Yapılacak" />
+
+    <fragment
+        android:id="@+id/detailFragment"
+        android:name="com.example.todoapp.ui.detail.DetailFragment"
+        android:label="Yapılacak Detayı">
+        <argument
+            android:name="todoId"
+            app:argType="integer" />
+    </fragment>
+
+</navigation> 
